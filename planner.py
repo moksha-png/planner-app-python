@@ -51,10 +51,11 @@ while True:
     if choice == "1":
         task_name = input("Enter a task: ")
         day = input("Enter a day: ")
-
+        priority=input("Enter your priority:")
         task.append({
             "task": task_name,
             "day": day
+            "priority":priority
         })
 
         print("Task added successfully!")
