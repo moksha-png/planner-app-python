@@ -68,9 +68,33 @@ while True:
             for t in task:
                 print(t["day"], "-", t["task"])
 
-    elif choice == "3":
-        print("Exiting planner")
+   elif choice == "3":
+        if len(task) == 0:
+            print("No tasks yet")
+            continue  # go back to menu
+
+        calendar = {}
+        for t in task:
+            day = t["day"]
+            if day not in calendar:
+                calendar[day] = []
+            calendar[day].append(t)
+
+        print("\n--- Calendar View ---")
+        for day, tasks_in_day in calendar.items():
+            print(f"\n{day.upper()}:")
+            for t in tasks_in_day:
+                print(f"- {t['task']} ({t['priority']})")
+
+    # ------------------------
+    # Exit
+    # ------------------------
+    elif choice == "4":
+        print("Exiting planner. Goodbye!")
         break
 
+    # ------------------------
+    # Invalid choice
+    # ------------------------
     else:
-        print("Invalid choice")
+        print("Invalid choice. Please enter 1, 2, 3, or 4.")
