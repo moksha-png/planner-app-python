@@ -39,3 +39,37 @@ elif overall_percentage>=70:
 else:
     print("Keep going!")
 print("No. of subjects with Good Job/Excellent:",good_job_count)
+task = []
+
+while True:
+    print("\n1. Add task")
+    print("2. View Planner")
+    print("3. Exit")
+
+    choice = input("Choose an option: ")
+
+    if choice == "1":
+        task_name = input("Enter a task: ")
+        day = input("Enter a day: ")
+
+        task.append({
+            "task": task_name,
+            "day": day
+        })
+
+        print("Task added successfully!")
+
+    elif choice == "2":
+        print("\n--- Your Planner ---")
+        if len(task) == 0:
+            print("No tasks yet")
+        else:
+            for t in task:
+                print(t["day"], "-", t["task"])
+
+    elif choice == "3":
+        print("Exiting planner")
+        break
+
+    else:
+        print("Invalid choice")
