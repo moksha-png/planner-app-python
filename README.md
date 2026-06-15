@@ -38,7 +38,7 @@ This project helps organize daily tasks in a simple and interactive way.
 
 # Author
 
-Moksha Pardeshi– 11th grade student learning Python and building projects.  
+Moksha Pardeshi– 12th grade student learning Python and building projects.  
 
 
 
